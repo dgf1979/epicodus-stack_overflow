@@ -1,0 +1,6 @@
+<%= bootstrap_form_for([@question, @answer]) do |f| %>
+  <%= render "layouts/errors", object: @answer %>
+    <%= f.text_area  :body, label: "Answer" %>
+    <%= f.hidden_field :user, value: current_user.id, name: "answer[user_id]" %>
+    <%= f.submit class: "btn btn-default btn-block" %>
+<% end %>

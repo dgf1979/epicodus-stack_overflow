@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :answers
+  has_many :questions
   attr_accessor :password
 
   validates_confirmation_of :password
