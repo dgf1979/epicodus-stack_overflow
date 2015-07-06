@@ -4,11 +4,11 @@
 
     <%= f.text_field :name %>
     <%= f.text_field :email %>
-    <% if current_user == @user %>
+    <% if current_user == nil || current_user == @user %>
       <%= f.password_field :password %>
       <%= f.password_field :password_confirmation %>
     <% end %>
-    <% if current_user.admin %>
+    <% if current_user && current_user.admin %>
       <%= f.check_box :admin %>
     <% end %>
   <div class="actions">
