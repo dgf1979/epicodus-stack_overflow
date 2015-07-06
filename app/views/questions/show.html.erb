@@ -1,17 +1,11 @@
-<h3>
-  <strong>Title:</strong>
-  <%= @question.title %>
-</h3>
+<h4><span class="muted"> <%= @user.name %> at <%= @question.created_at.strftime("%l:%M %p, %a %d %b %Y") %></span></h4>
+<h3><%= @question.title %></h3>
 
 <p>
   <strong>Question:</strong>
   <%= @question.body %>
 </p>
 
-<p>
-  <strong>Asker:</strong>
-  <%= @user.name %>
-</p>
 <% if current_user && (current_user == @user || current_user.admin) %>
   <%= link_to 'Edit', edit_question_path(@question) %> |
 <% end %>

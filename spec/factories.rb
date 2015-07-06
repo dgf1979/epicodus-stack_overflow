@@ -5,4 +5,9 @@ FactoryGirl.define do
     password("1234")
     admin(false)
   end
+
+  factory(:question) do
+    title("Stuff")
+    body("Things")
+  end
 end

@@ -10,11 +10,11 @@
 <nav class='navbar navbar-default navbar-fixed-top navbar-success' role='navigation'>
   <div class="container-fluid">
     <div class="navbar-header">
-      <%= link_to "Home", users_path, class: "navbar-brand" %>
+      <%= link_to "Home", questions_path, class: "navbar-brand" %>
     </div>
     <ul class='nav navbar-nav navbar-right'>
       <% if current_user %>
-        <p class="navbar-text">Signed in as <%= current_user.name %></p>
+        <p class="navbar-text">Signed in as <%= link_to current_user.name, user_path(current_user) %></p>
         <li><%= link_to "Sign Out", log_out_path %></li>
       <% else %>
         <li><%= link_to "Sign In", log_in_path %></li>

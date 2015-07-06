@@ -1,5 +1,13 @@
 require 'rails_helper'
 
+def log_in
+  user = FactoryGirl.create(:user)
+  visit log_in_path
+  fill_in "Email", with: "josh@josh.net"
+  fill_in "Password", with: "1234"
+  click_on "Log in"
+end
+
 describe "user management" do
   it "signs up a new user" do
     visit new_user_path
@@ -38,19 +46,9 @@ describe "user management" do
   end
 
   it "destroys a user" do
-    user = FactoryGirl.create(:user)
+    log_in
     visit users_path
     click_on "Destroy"
     expect(page).to_not have_content 'Josh'
   end
 end
-
-
-
-#
-# describe "authentication" do
-#   it "adds a user" do
-#
-#   end
-#
-# end

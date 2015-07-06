@@ -2,7 +2,7 @@
   <%= render "layouts/errors", object: @question %>
 
     <%= f.text_field :title %>
-    <%= f.text_area :body %>
+    <%= f.text_area  :body, label: "Question" %>
     <%= f.hidden_field :user, value: current_user.id, name: "question[user_id]" %>
     <%= f.submit class: "btn btn-default btn-block" %>
 <% end %>
