@@ -18,7 +18,7 @@
         <tr>
           <td><%= question.title %></td>
           <td><%= question.body %></td>
-          <td><%= question.user_id %></td>
+          <td><%= question.user.name %></td>
           <td><%= link_to 'Show', question %></td>
           <td>
             <% if current_user && (current_user.id == question.user_id || current_user.admin) %>
@@ -41,4 +41,8 @@
 <% end %>
 <br>
 
-<%= link_to 'New Question', new_question_path %>
+<% if current_user %>
+  <%= link_to 'New Question', new_question_path %>
+<% else %>
+  Log in to ask  a question
+<% end %>

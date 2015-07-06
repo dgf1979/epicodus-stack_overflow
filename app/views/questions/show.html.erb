@@ -22,10 +22,14 @@
           <td><%= answer.body %></td>
           <td><%= answer.user.name %></td>
           <td>
-            <%= link_to 'Edit', edit_question_answer_path(@question, answer) %>
+            <% if current_user && (current_user.id == answer.user.id || current_user.admin) %>
+              <%= link_to 'Edit', edit_question_answer_path(@question, answer) %>
+            <% end %>
           </td>
           <td>
-            <%= link_to 'Destroy', question_answer_path(@question, answer), method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% if current_user && (current_user.id == answer.user.id || current_user.admin) %>
+              <%= link_to 'Destroy', question_answer_path(@question, answer), method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
           </td>
         </tr>
       <% end %>
@@ -33,7 +37,12 @@
   </table>
 <% else %>
   <p class="lead">
-    There are no answers yet, <%= link_to "please add one", new_question_answer_path(@question) %>
+    There are no answers yet
+    <% if current_user && (current_user.id == @question.user_id || current_user.admin) %>
+      , <%= link_to "please add one", new_question_answer_path(@question) %>
+      <% else %>
+       - Log in to add an answer
+      <% end %>
   </p>
 <% end %>
 
