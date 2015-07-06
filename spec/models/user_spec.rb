@@ -6,6 +6,9 @@ describe User do
   it { should validate_uniqueness_of :email }
   it { should validate_confirmation_of :password }
 
+  it { should have_many :answers }
+  it { should have_many :questions }
+
   describe ".authenticate" do
     it "will authenticate a user when their email and password match the database" do
       user = FactoryGirl.create(:user)
