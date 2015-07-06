@@ -10,4 +10,8 @@ FactoryGirl.define do
     title("Stuff")
     body("Things")
   end
+
+  factory(:answer) do
+    body("because")
+  end
 end
