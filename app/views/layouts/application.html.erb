@@ -7,6 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<nav class='navbar navbar-default navbar-fixed-top navbar-success' role='navigation'>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <%= link_to "Home", users_path, class: "navbar-brand" %>
+    </div>
+    <ul class='nav navbar-nav navbar-right'>
+      <% if current_user %>
+        <li><%= link_to "Sign Out", log_out_path %></li>
+      <% else %>
+        <li><%= link_to "Sign In", log_in_path %></li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
 
 <div class="container">
   <% if flash[:notice] %>
@@ -23,7 +37,7 @@
   <% end %>
 
   <%= yield %>
-  
+
 </div>
 
 </body>
