@@ -3,4 +3,7 @@ class Question < ActiveRecord::Base
   has_many :answers
   validates :title, presence: true
   validates :body, presence: true
+
+  scope :questions_today, -> { where("created_at < ?", Date.new) }
+
 end
