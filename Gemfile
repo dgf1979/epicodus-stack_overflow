@@ -17,6 +17,7 @@ group :development do
   gem "web-console"
   gem "spring"
   gem "quiet_assets"
+  gem "letter_opener"
 end
 
 group :test, :development do

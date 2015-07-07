@@ -20,4 +20,11 @@ describe User do
       expect(User.authenticate(user.email, "stuff")).to eq nil
     end
   end
+
+  describe "#send_welcome_email" do
+    it "will send an email to a user once they are successfully created" do
+      user = FactoryGirl.create(:user)
+      expect(ActionMailer::Base.deliveries.last.to).to eq [user.email]
+    end
+  end
 end

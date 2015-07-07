@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <title></title>
+  </head>
+  <body>
+    <h1><%= @user.name %>, welcome to localhost:3000, your source for made-up data.</h1>
+    <p>
+      You have successfully signed up for our site, your name and email are:
+      <ul>
+        <li> <%= @user.name %></li>
+        <li> <%= @user.email %></li>
+      </ul>
+      Please use your email to sign in <a href=<%= @url %>>here</a>
+    </p>
+    <p>
+      Thanks for joining,<br>
+      -Drew & Ian
+    </p>
+  </body>
+</html>

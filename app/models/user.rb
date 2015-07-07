@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true
 
   before_save :encrypt_password
+  after_create :send_welcome_email
 
   def encrypt_password
     self.password_salt = BCrypt::Engine.generate_salt
@@ -24,4 +25,7 @@ class User < ActiveRecord::Base
     end
   end
 
+  def send_welcome_email
+    UserMailer.welcome_email(self).deliver_now
+  end
 end
