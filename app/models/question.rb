@@ -4,6 +4,6 @@ class Question < ActiveRecord::Base
   validates :title, presence: true
   validates :body, presence: true
 
-  scope :questions_today, -> { where("created_at < ?", Date.new) }
+  scope :questions_today, -> { where("created_at < ?", Time.new.utc) }
 
 end
