@@ -15,3 +15,20 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+var ready = function () {
+  $(".toggle-buttons").on("click", function () {
+    if (!$(this).hasClass("active")) {
+      $(".toggle-buttons").removeClass("active")
+      $(this).addClass("active");
+      questionsToday();
+    }
+  });
+};
+
+function questionsToday() {
+  $(".questions-sort").toggle();
+}
+
+$(document).ready(ready);
+$(document).on("page:load", ready);
