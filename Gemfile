@@ -12,6 +12,9 @@ gem "sass-rails", ">= 3.2"
 gem "bootstrap_form"
 gem "bcrypt-ruby", "~> 3.1.5", require: "bcrypt"
 gem "d3-rails"
+gem "chartkick", '~> 1.2.4'
+gem 'groupdate', '~> 2.1.1'
+gem 'active_median', '~> 0.1.0'
 
 group :development do
   gem "byebug"

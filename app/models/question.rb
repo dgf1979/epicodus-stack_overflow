@@ -12,8 +12,9 @@ class Question < ActiveRecord::Base
   }
 
   def self.by_day
-    query = "select date(created_at) as day, count(*) from questions group by day;"
-    return Question.connection.exec_query(query)
+    query = "select date(created_at) as day from questions;"
+    result = Question.group("date(created_at)").count
+    return result
   end
 
   def send_new_question_email
