@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-07T11:23:38-07:00">2015-07-07T11:23:38-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-07T11:40:10-07:00">2015-07-07T11:40:10-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.53
+         2.56
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>33</b> files in total.
-    <b>405</b> relevant lines. 
-    <span class="green"><b>405</b> lines covered</span> and
+    <b>420</b> relevant lines. 
+    <span class="green"><b>420</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -123,21 +123,21 @@
       <tr>
         <td class="strong"><a href="#aa431f12440bff89564af7c419ef8eee1c0f392b" class="src_link" title="app/mailers/user_mailer.rb">app/mailers/user_mailer.rb</a></td>
         <td class="green strong">100.0 %</td>
+        <td>23</td>
         <td>16</td>
-        <td>11</td>
-        <td>11</td>
+        <td>16</td>
         <td>0</td>
-        <td>9.0</td>
+        <td>7.9</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#978c54c1c5112ea85e9d834923bbc677b81a3f82" class="src_link" title="app/models/answer.rb">app/models/answer.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>7</td>
-        <td>6</td>
-        <td>6</td>
+        <td>15</td>
+        <td>10</td>
+        <td>10</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>1.8</td>
       </tr>
       
       <tr>
@@ -147,7 +147,7 @@
         <td>12</td>
         <td>12</td>
         <td>0</td>
-        <td>2.8</td>
+        <td>2.9</td>
       </tr>
       
       <tr>
@@ -157,7 +157,7 @@
         <td>19</td>
         <td>19</td>
         <td>0</td>
-        <td>6.5</td>
+        <td>6.6</td>
       </tr>
       
       <tr>
@@ -343,11 +343,11 @@
       <tr>
         <td class="strong"><a href="#909070e3f38c99240f0c1e25283353c0431be1ae" class="src_link" title="spec/models/answer_spec.rb">spec/models/answer_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>7</td>
-        <td>5</td>
-        <td>5</td>
+        <td>16</td>
+        <td>11</td>
+        <td>11</td>
         <td>0</td>
-        <td>1.6</td>
+        <td>1.3</td>
       </tr>
       
       <tr>
@@ -1829,8 +1829,8 @@
     <h3>app/mailers/user_mailer.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>11</b> relevant lines. 
-      <span class="green"><b>11</b> lines covered</span> and
+      <b>16</b> relevant lines. 
+      <span class="green"><b>16</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1862,20 +1862,20 @@
           <code class="ruby">  def welcome_email(user)</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="5">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="22" data-linenumber="5">
+          <span class="hits">22</span>
           
           <code class="ruby">    @user = user</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="6">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="22" data-linenumber="6">
+          <span class="hits">22</span>
           
           <code class="ruby">    @url = &quot;http://localhost:3000/log-in&quot;</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="7">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="22" data-linenumber="7">
+          <span class="hits">22</span>
           
           <code class="ruby">    mail(to: @user.email, subject: &quot;Welcome to our site!&quot;)</code>
         </li>
@@ -1898,26 +1898,26 @@
           <code class="ruby">  def new_question_email(user, question)</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="11">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="9" data-linenumber="11">
+          <span class="hits">9</span>
           
           <code class="ruby">    @user = user</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="12">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="9" data-linenumber="12">
+          <span class="hits">9</span>
           
           <code class="ruby">    @question = question</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="13">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="9" data-linenumber="13">
+          <span class="hits">9</span>
           
           <code class="ruby">    @url = &quot;http://localhost:3000/questions/#{@question.id}&quot;</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="14">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="9" data-linenumber="14">
+          <span class="hits">9</span>
           
           <code class="ruby">    mail(to: @user.email, subject: &quot;Thanks for asking a question!&quot;)</code>
         </li>
@@ -1929,6 +1929,48 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def answered_email(user, question)</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="18">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    @user = user</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="19">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    @question = question</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="20">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    @url = &quot;http://localhost:3000/questions/#{@question.id}&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="21">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    mail(to: @user.email, subject: &quot;Your question has been answered!&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">end</code>
@@ -1943,8 +1985,8 @@
     <h3>app/models/answer.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>6</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
+      <b>10</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1989,6 +2031,54 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  after_create :send_answered_email</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def send_answered_email</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="11">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    if self.question.user_id</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="12">
+          <span class="hits">5</span>
+          
+          <code class="ruby">      UserMailer.answered_email(User.find(self.question.user_id), self.question).deliver_now</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">end</code>
@@ -2096,14 +2186,14 @@
           <code class="ruby">  def send_new_question_email</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="15">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="14" data-linenumber="15">
+          <span class="hits">14</span>
           
           <code class="ruby">    if self.user_id</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="16">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="9" data-linenumber="16">
+          <span class="hits">9</span>
           
           <code class="ruby">      UserMailer.new_question_email(User.find(self.user_id), self).deliver_now</code>
         </li>
@@ -2228,14 +2318,14 @@
           <code class="ruby">  def encrypt_password</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="15">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="23" data-linenumber="15">
+          <span class="hits">23</span>
           
           <code class="ruby">    self.password_salt = BCrypt::Engine.generate_salt</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="16">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="23" data-linenumber="16">
+          <span class="hits">23</span>
           
           <code class="ruby">    self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)</code>
         </li>
@@ -2312,8 +2402,8 @@
           <code class="ruby">  def send_welcome_email</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="29">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="22" data-linenumber="29">
+          <span class="hits">22</span>
           
           <code class="ruby">    UserMailer.welcome_email(self).deliver_now</code>
         </li>
@@ -5273,8 +5363,8 @@
     <h3>spec/models/answer_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>5</b> relevant lines. 
-      <span class="green"><b>5</b> lines covered</span> and
+      <b>11</b> relevant lines. 
+      <span class="green"><b>11</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -5319,6 +5409,60 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;#send_answer_email&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;will send an email to a question asker when an answer is posted&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      user = FactoryGirl.create(:user)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      question = FactoryGirl.create(:question, user_id: user.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      answer = FactoryGirl.create(:answer, question_id: question.id, user_id: user.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(ActionMailer::Base.deliveries.last.to).to eq [user.email]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">end</code>

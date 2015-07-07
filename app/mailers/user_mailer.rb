@@ -13,4 +13,11 @@ class UserMailer < ApplicationMailer
     @url = "http://localhost:3000/questions/#{@question.id}"
     mail(to: @user.email, subject: "Thanks for asking a question!")
   end
+
+  def answered_email(user, question)
+    @user = user
+    @question = question
+    @url = "http://localhost:3000/questions/#{@question.id}"
+    mail(to: @user.email, subject: "Your question has been answered!")
+  end
 end
