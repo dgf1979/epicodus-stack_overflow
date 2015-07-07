@@ -2,6 +2,25 @@
 
 <h1>Questions</h1>
 
+<% if current_user && current_user.admin %>
+  <div class="col-md-4">
+    <table class="table">
+      <thead>
+        <th>Day</th>
+        <th>Count</th>
+      </thead>
+      <tbody>
+        <% Question.by_day.each do |r| %>
+        <tr>
+          <td><%= Date.parse(r["day"]).strftime("%b %e, %Y") %></td>
+          <td><%= r["count"] %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% end %>
+<br>
 <% if @questions.any? %>
   <div class="btn-group btn-group-justified" role="group">
     <a type="button" class="toggle-buttons btn btn-default" id="show-questions-today">
