@@ -46,7 +46,7 @@ describe "question management" do
     user = User.find_by(email: "josh@josh.net")
     question = FactoryGirl.create(:question, user_id: user.id)
     visit questions_path
-    click_on "Destroy"
+    first(:link, "Destroy").click
     expect(page).to_not have_content 'Stuff'
   end
 end
