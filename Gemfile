@@ -11,6 +11,7 @@ gem "bootstrap-sass", "~> 3.3.5"
 gem "sass-rails", ">= 3.2"
 gem "bootstrap_form"
 gem "bcrypt-ruby", "~> 3.1.5", require: "bcrypt"
+gem "d3-rails"
 
 group :development do
   gem "byebug"

@@ -44,4 +44,79 @@
 </div>
 
 </body>
+<script type="text/javascript">
+
+var svg = d3.select("#chart")
+
+// var regexp = new RegExp('&\\w*;*', 'g')
+// var stuff = (<%= Question.by_day.to_json %>).replace(regexp, "'")
+// var json = JSON.parse (  );
+// var data = [{day: 2015-07-05, count: 4}, {day: 2015-07-07, count: 1}];
+//  $("#chart").text("hi");
+function draw(data) {
+
+}
+$(document).ready(function () {
+  d3.json("http://localhost:3000/questions/json", function (error, json) {
+    margin = 40
+    w = 500 - margin
+    h = 200 - margin
+
+    var chart = d3.selectAll("#chart")
+                  // .attr("style", "background-color:black")
+                  .append("svg")
+                    .attr("width", w + margin)
+                    .attr("height", h + margin)
+
+    var bars = d3.select("svg")
+                  .selectAll("bar")
+                  .data(json)
+                  .enter()
+                  .append("rect")
+                    .attr("class", "bar")
+                    .attr("width", 10)
+                    .attr("fill", "red");
+
+    var time_extent = d3.extent(json,
+      function (d) { return new Date(d.day) }
+    );
+
+    var time_scale = d3.time.scale().domain(time_extent).range([margin, w]);
+
+    var time_axis = d3.svg.axis().scale(time_scale);
+
+    var count_extent = d3.extent(json,
+      function (d) { return d.count }
+    );
+
+    var count_scale = d3.scale.linear().domain([count_extent[1], 0]).range([margin, h]);
+
+    var count_axis = d3.svg.axis().scale(count_scale).orient("left");
+
+    d3.selectAll("rect")
+      .attr("x", function (d) {
+        return time_scale(new Date(d.day))-5;
+      })
+      .attr("y", function (d) {
+        return h-count_scale(d.count);
+      })
+      .attr("height", function (d) {
+        return count_scale(d.count);
+      });
+
+    d3.select("svg")
+      .append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + h + ")")
+      .call(time_axis);
+
+    d3.select("svg")
+      .append("g")
+      .attr("class", "y axis")
+      .attr("transform", "translate(" + margin + ",0)")
+      .call(count_axis);
+  });
+})
+</script>
+
 </html>

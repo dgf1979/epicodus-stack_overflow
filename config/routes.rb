@@ -6,10 +6,13 @@ Rails.application.routes.draw do
   post "/log-in" => "sessions#create"
   get "/log-out" => "sessions#destroy", as: :log_out
 
+  get "/questions/json"
+
   resources :users
   resources :questions do
-    resources :answers, except: [:index, :show]  
+    resources :answers, except: [:index, :show]
   end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

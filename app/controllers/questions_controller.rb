@@ -40,6 +40,10 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def json
+    render json: Question.by_day.to_json
+  end
+
   # DELETE /questions/1
   def destroy
     @question.destroy
