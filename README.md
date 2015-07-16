@@ -1,22 +1,16 @@
-## APP NAME
-
-<a href="APP LINK IF APPLICABLE" target="#"><APP LINK NAME></a>
-
-By Ian MacDonald (<a href="https://github.com/matchbookmac" target="#">GitHub</a>)
+## Stack Overflow-Alike
 
 @ Epicodus Programming School, Portland, OR
 
-GNU General Public License, version 3 (see below). Copyright (c) 2015 Ian C. MacDonald.
+GNU General Public License, version 3 (see below). Copyright (c) 2015 by Authors
 
 ### Description
 
-**APP NAME**
-
-<DESCRIPTION>
+Re-creates a minimal subset of Stack Overflow features
 
 ### Author(s)
 
-Ian MacDonald
+Pair-programmed by: Ian MacDonald & Drew Finstrom
 
 ### Setup
 
@@ -24,7 +18,7 @@ This app was written in `Rails '4.2.3'`.
 
 Clone this repo with
 ```console
-> git clone https://github.com/matchbookmac/<REPO NAME>.git
+> git clone https://github.com/dgf197/epicodus-stack_overflow.git
 ```
 
 Install gems:
@@ -44,33 +38,6 @@ Start App:
 ```console
 > rails s
 ```
-
-### Database Schema
-
-List of relations
-
-   Name     | Type  
- ---------- | -------
- <relation_0>    | table
- <relation_1>   | table
-
-<relation_0> table
-
-id  | first_name | last_name | stylist_id
-----|------------|-----------|------------
-int | varchar    | varchar   | int
-
-<relation_1> table
-
-id  | first_name | last_name
-----|------------|-----------
-int | varchar    | varchar
-
-bands_venues join table
-
-<relation_0>_id | <relation_1>_id
---------|---------
-int     | int
 
 ### License ###
 Copyright  (C)  2015  Ian C. MacDonald
